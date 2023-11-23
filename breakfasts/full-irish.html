@@ -60,33 +60,57 @@
     <h1>Delicious Recipes</h1>
     <p>Discover a world of culinary delights</p>
 </header>
-<div class="container">
-    <section class="mt-4">
-        <h2>Breakfasts</h2>
-        <p>Discover a range of breakfast recipes</p>
-        <a href="#" class="btn btn-primary">View Recipes</a>
-    </section>
+    <div class="recipe-container">
+        <h1><i class="fas fa-utensils"></i> Delicious Recipe Title</h1>
 
-    <section class="mt-4">
-        <h2>Lunches</h2>
-        <p>Discover a range of lunch recipes</p>
-        <a href="#" class="btn btn-primary">View Recipes</a>
-    </section>
+        <img src="recipe-image.jpg" alt="Delicious Recipe">
 
-    <section class="mt-4">
-        <h2>Dinners</h2>
-        <p>Discover a range of dinner recipes</p>
-        <a href="#" class="btn btn-primary">View Recipes</a>
-    </section>
+        <h2><i class="fas fa-clipboard-list"></i> Ingredients</h2>
+        <ul>
+            <li><i class="fas fa-check"></i> Ingredient 1</li>
+            <li><i class="fas fa-check"></i> Ingredient 2</li>
+            <li><i class="fas fa-check"></i> Ingredient 3</li>
+            <!-- Add more ingredients as needed -->
+        </ul>
 
-    <section class="mt-4">
-      <h2>Desserts</h2>
-      <p>Discover a range of dessert recipes</p>
-      <a href="#" class="btn btn-primary">View Recipes</a>
-  </section>
+        <h2><i class="fas fa-book-open"></i> Instructions</h2>
+        <ol>
+            <li><i class="fas fa-chevron-right"></i> Step 1: Instruction 1</li>
+            <li><i class="fas fa-chevron-right"></i> Step 2: Instruction 2</li>
+            <li><i class="fas fa-chevron-right"></i> Step 3: Instruction 3</li>
+            <!-- Add more instructions as needed -->
+        </ol>
 
-</div>
-
+        <p><i class="far fa-smile"></i> Enjoy your delicious recipe!</p>
+    </div>
+    <div id="imageCarousel" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <a href="https://example.com/link1" target="_blank">
+                  <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Slide 1">
+              </a>
+          </div>
+          <div class="carousel-item">
+              <a href="https://example.com/link2" target="_blank">
+                  <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Slide 2">
+              </a>
+          </div>
+          <div class="carousel-item">
+              <a href="https://example.com/link3" target="_blank">
+                  <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="Slide 3">
+              </a>
+          </div>
+          <!-- Add more carousel items as needed -->
+      </div>
+      <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+      </a>
+  </div>
 <footer class="mt-4">
     <p>&copy; 2023 Group 13 CA106</p>
 </footer>
