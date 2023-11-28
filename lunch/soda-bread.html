@@ -1,0 +1,79 @@
+<!Doctype html>
+<!--Ciarán Johnson-->
+
+<html lang="en-gb">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="Food Recipes" content="Recipes" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="../css/style.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+      <title>Irish Soda Bread | Recipes</title>
+   </head>
+<head>
+<body>
+  <div w3-include-html="../nav/nav.html"></div>
+  <!-- Recipe is sourced from: https://www.bbcgoodfood.com/recipes/irish-soda-bread-->
+    <div class="recipe-container">
+        <h1><i class="fas fa-utensils"></i> Irish Soda Bread</h1>
+        <img src="../imgs/soda-bread.jpg" alt="Soda Bread">
+        <h2><i class="fas fa-clipboard-list"></i> Ingredients</h2>
+        <ul>
+            <li><i class="fas fa-check"></i> 250g plain white flour</li>
+            <li><i class="fas fa-check"></i> 250g plain wholemeal flour</li>
+            <li><i class="fas fa-check"></i> 100g porridge oats</li>
+            <li><i class="fas fa-check"></i> 1 tsp bicarbonate of soda</li>
+            <li><i class="fas fa-check"></i> 1 tsp salt</li>
+            <li><i class="fas fa-check"></i> 25g butter, cut in pieces</li>
+            <li><i class="fas fa-check"></i> 500ml buttermilk</li>
+        </ul>
+        <h2><i class="fas fa-book-open"></i> Instructions</h2>
+        <ol>
+            <li><i class="fas fa-chevron-right"></i> Step 1: Preheat the oven to 200C/gas 6/fan 180C and dust a baking sheet with flour. Mix the dry ingredients in a large bowl, then rub in the butter. Pour in the buttermilk and mix it in quickly with a table knife, then bring the dough together very lightly with your fingertips (handle it very, very gently). Now shape it into a flat, round loaf measuring 20cm/8in in diameter.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 2: Put the loaf on the baking sheet and score a deep cross in the top. (Traditionally, this lets the fairies out, but it also helps the bread to cook through.) Bake for 30-35 minutes until the bottom of the loaf sounds hollow when tapped. If it is not ready after this time, turn it upside down on the baking sheet and bake for a few minutes more.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 3: Transfer to a wire rack, cover with a clean tea towel (this keeps the crust nice and soft) and leave to cool. To serve, break into quarters, then break or cut each quarter in half to make 8 wedges or slices or simply slice across. Eat very fresh.</li>
+        </ol>
+        <p><i class="far fa-smile"></i> Enjoy your Irish Soda Bread.</p>
+    </div>
+  </div>
+<footer class="mt-4">
+    <p>&copy; 2023 Group 13 CA106</p>
+</footer>
+<script>
+  function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /* Loop through a collection of all HTML elements: */
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      /*search for elements with a certain atrribute:*/
+      file = elmnt.getAttribute("w3-include-html");
+      if (file) {
+        /* Make an HTTP request using the attribute value as the file name: */
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            /* Remove the attribute, and call this function once more: */
+            elmnt.removeAttribute("w3-include-html");
+            includeHTML();
+          }
+        }
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /* Exit the function: */
+        return;
+      }
+    }
+  }
+  </script> 
+   <script>
+    includeHTML();
+    </script> 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
