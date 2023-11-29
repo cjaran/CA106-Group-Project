@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Contact Us | Group 13</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
 <div w3-include-html="./nav/nav.html"></div>
 <div class="container mt-5">
   <h2>Contact Us</h2>
-  <form id="contactForm" action="https://formspree.io/your-email-here" method="POST">
+  <form id="contactForm" action="https://formspree.io/not-a-real-email" method="POST">
     <div class="mb-3">
       <label for="name" class="form-label">Your Name</label>
       <input type="text" class="form-control" id="name" name="name" required>
@@ -29,11 +30,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
-<script>
-  window.formbutton = window.formbutton || function () { (window.formbutton.q = window.formbutton.q || []).push(arguments) };
-  formbutton("create", { action: "https://formspree.io/your-email-here" });
-</script>
 <script>
   function includeHTML() {
     var z, i, elmnt, file, xhttp;
