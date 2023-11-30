@@ -1,0 +1,89 @@
+<!Doctype html>
+<!--Hubert Iwanow-->
+
+<html lang="en-gb">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="Food Recipes" content="Recipes" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="../css/style.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+      <title>Polish Apple Pie | Recipes</title> 
+   </head>
+<head>
+<body>
+  <div w3-include-html="../nav/nav.html"></div>
+  <!-- Recipe is sourced from: https://polishhousewife.com/szarlotka-polish-apple-pie/-->
+    <div class="recipe-container">
+        <h1><i class="fas fa-utensils"></i> Polish applie pie(szarlotka)</h1>
+        <img src="../imgs/szarlotka.jpg" alt="Delicious Recipe">
+        <h2><i class="fas fa-clipboard-list"></i> Ingredients</h2>
+        <ul>
+            <li><i class="fas fa-check"></i> 250 grams of flour</li>
+            <li><i class="fas fa-check"></i> 200 grams of sugar</li>
+            <li><i class="fas fa-check"></i> 3/4 teaspoon of baking powder</li>
+            <li><i class="fas fa-check"></i> 125 grams of butter</li>
+            <li><i class="fas fa-check"></i> 1 killogram of apples(granny smith)</li>
+            <li><i class="fas fa-check"></i> 1/2 teaspoon of cinnamon</li>
+            <li><i class="fas fa-check"></i> 2 egg yolks</li>
+            <li><i class="fas fa-check"></i> 1 whole egg</li>
+        </ul>
+        <h2><i class="fas fa-book-open"></i> Instructions, <br> Time to prepare: 1 hour, 40 minutes</h2>
+        <ol>
+            <li><i class="fas fa-chevron-right"></i> Step 1: We will start off with pre-heating the oven to 180°C.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 2: While the oven is heating up, pour the flour along with the baking powder and sugar into a bowl and mix.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 3: Add butter to thr mix and keep mixing until everythinh is well combined.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 4: Now add in the whole and both the egg yolks into the bowl and once again mix until well combined. It should have a crumbly texture.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 5: We will now cover the bowl and put it in the fridge for 30 minutes.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 6: Now we will now get a 9 inch springform pan and fill it with 2/3 of the mix and leave the other 1/3 in the fridge for a future step. the 2/3 should cover the whole pan and its sides.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 7: Cut the apples into slices and add to a bowl and mix with the cinnamon.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 8: Now start piling up the apples nicely into the pan so you can fit as many as you can.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 9: Now come back to the other 1/3 of the mix and turn it into our crumble and begin to sprinkle the entirety over the pie.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 10: Finally we can put the pie into the oven for about 50 minutes or until you see the crust is lighlt brown and the apples become tender.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 11: We can now take the pie out of the oven but be vare cautious as it will be very hot.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 12: You can now serve and savour it on a plate by itself or ice cream beside it.</li>
+        </ol>
+        <p><i class="far fa-smile"></i> Enjoy your authentic polish szarlotka</p>
+    </div>
+  </div>
+<footer class="mt-4">
+    <p>&copy; 2023 Group 13 CA106</p>
+</footer>
+<script>
+  function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /* Loop through a collection of all HTML elements: */
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      /*search for elements with a certain atrribute:*/
+      file = elmnt.getAttribute("w3-include-html");
+      if (file) {
+        /* Make an HTTP request using the attribute value as the file name: */
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            /* Remove the attribute, and call this function once more: */
+            elmnt.removeAttribute("w3-include-html");
+            includeHTML();
+          }
+        }
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /* Exit the function: */
+        return;
+      }
+    }
+  }
+  </script> 
+   <script>
+    includeHTML();
+    </script> 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
