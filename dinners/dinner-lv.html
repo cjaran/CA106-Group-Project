@@ -1,0 +1,83 @@
+<!Doctype html>
+<!--Danila Jegorenkovs-->
+
+<html lang="en-gb">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="Food Recipes" content="Recipes" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="../css/style.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+      <title>Mushroom soup | Recipes</title> 
+   </head>
+<body>
+  <div w3-include-html="../nav/nav.html"></div>
+  <!-- Recipe is sourced from: https://www.bbcgoodfood.com/recipes/irish-stew-->
+    <div class="recipe-container">
+        <h1><i class="fas fa-utensils"></i> Irish Stew</h1>
+        <img src="../imgs/irish-stew.jpg" alt="Delicious Recipe">
+        <h2><i class="fas fa-clipboard-list"></i> Ingredients</h2>
+        <ul>
+            <li><i class="fas fa-check"></i> </li>
+            <li><i class="fas fa-check"></i> </li>
+            <li><i class="fas fa-check"></i> </li>
+            <li><i class="fas fa-check"></i> </li>
+            <li><i class="fas fa-check"></i> </li>
+            <li><i class="fas fa-check"></i> </li>
+            <li><i class="fas fa-check"></i> </li>
+            <li><i class="fas fa-check"></i> </li>
+            <li><i class="fas fa-check"></i> </li>
+            <li><i class="fas fa-check"></i> </li>
+            <li><i class="fas fa-check"></i> </li>
+            <li><i class="fas fa-check"></i> </li>
+        </ul>
+        <ol>
+            <li><i class="fas fa-chevron-right"></i> Step 1: Place dried mushrooms in a medium bowl and add warm water. Let them sit for 30 minutes. Remove the mushrooms from the liquid and finely chop them. Reserve the soaking liquid.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 2: Cut the fresh mushrooms into even pieces. Finely chop the onion. Warm oil in a large frying pan, and add onion. Cook onion until it has softened. Add raw mushrooms and soaked mushrooms and cook for 5-7 minutes.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 3: Finely chop bacon. Heat up a separate pan and add bacon pieces. Fry for 4-5minutes or until the bacon has browned and crisped up.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 4: Peel and cube potatoes. Pour water in a medium pot on medium-high heat. Add potatoes. Bring the pot to aboil, and simmer for 5 minutes. Add onion and mushroom mixture.  Simmer for 5 minutes or until potatoes are soft. Add cream, and bring soup to a boil. Add cooked bacon. Remove from heat and serve.</li>
+        </ol>
+        <p><i class="far fa-smile"></i> Enjoy your Mushroom Soup</p>
+    </div>
+  </div>
+<footer class="mt-4">
+  <p>&copy; 2023 Group 13 CA106, Written by Danila</p>
+</footer>
+<script>
+  function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /* Loop through a collection of all HTML elements: */
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      /*search for elements with a certain atrribute:*/
+      file = elmnt.getAttribute("w3-include-html");
+      if (file) {
+        /* Make an HTTP request using the attribute value as the file name: */
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            /* Remove the attribute, and call this function once more: */
+            elmnt.removeAttribute("w3-include-html");
+            includeHTML();
+          }
+        }
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /* Exit the function: */
+        return;
+      }
+    }
+  }
+  </script> 
+   <script>
+    includeHTML();
+    </script> 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
