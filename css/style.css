@@ -1,11 +1,11 @@
-/* Navbar container */
+/* Ciarán Johnson */
+
 .navbar_nb {
   overflow: hidden;
   background-color: #333;
   font-family: Arial;
 }
 
-/* Links inside the navbar */
 .navbar_nb a {
   float: left;
   font-size: 16px;
@@ -15,13 +15,11 @@
   text-decoration: none;
 }
 
-/* The dropdown_nb container */
 .dropdown_nb {
   float: left;
   overflow: hidden;
 }
 
-/* Dropdown button */
 .dropdown_nb .dropbtn {
   font-size: 16px;
   border: none;
@@ -33,12 +31,10 @@
   margin: 0;
 }
 
-/* Add a red background color to navbar links on hover */
 .navbar_nb a:hover, .dropdown_nb:hover .dropbtn {
   background-color: red;
 }
 
-/* Dropdown content (hidden by default) */
 .dropdown-content {
   display: none;
   position: absolute;
@@ -48,7 +44,6 @@
   z-index: 1;
 }
 
-/* Links inside the dropdown_nb */
 .dropdown-content a {
   float: none;
   color: black;
@@ -58,17 +53,14 @@
   text-align: left;
 }
 
-/* Add a grey background color to dropdown_nb links on hover */
 .dropdown-content a:hover {
   background-color: #ddd;
 }
 
-/* Show the dropdown_nb menu on hover */
 .dropdown_nb:hover .dropdown-content {
   display: block;
 }
 
-/* Media query for screens smaller than 768px (mobile) */
 @media (max-width: 768px) {
   .navbar_nb a, .dropdown_nb .dropbtn {
       float: none;
