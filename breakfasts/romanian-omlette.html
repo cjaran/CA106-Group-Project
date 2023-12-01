@@ -1,0 +1,84 @@
+<!Doctype html>
+<!--Ayllen Jicmon-->
+
+<html lang="en-gb">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="Food Recipes" content="Recipes" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="../css/style.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+      <title>Romanian Omlette | Recipes</title> 
+   </head>
+<body>
+  <div w3-include-html="../nav/nav.html"></div>
+  <!-- Recipe is sourced from: http://www.deliciousromania.com/recipes/breakfast/romanian-peasant-omelette-omleta-taraneasca/-->
+    <div class="recipe-container">
+        <h1><i class="fas fa-utensils"></i> Romanian Omlette</h1>
+        <img src="../imgs/irish-coffee.jpg" alt="Delicious Recipe">
+        <h2><i class="fas fa-clipboard-list"></i> Ingredients</h2>
+        <ul>
+            <li><i class="fas fa-check"></i> 2 tbsp of sunflower oil</li>
+            <li><i class="fas fa-check"></i> 3 medium eggs</li>
+            <li><i class="fas fa-check"></i> 1/2 onion</li>
+            <li><i class="fas fa-check"></i> 1/2 bell pepper</li>
+            <li><i class="fas fa-check"></i> 2 mushrooms</li>
+            <li><i class="fas fa-check"></i> 1/2 smoked, thin sausage</li>
+            <li><i class="fas fa-check"></i> 1/2 cup of mozzarella cheese</li>
+            <li><i class="fas fa-check"></i> A bit of milk</li>
+            <li><i class="fas fa-check"></i> Salt and pepper to taste</li>
+        </ul>
+        <h2><i class="fas fa-book-open"></i> Instructions, <br> Prep Time: 5 minutes  |  Cook Time: 10 minutes</h2>
+        <ol>
+            <li><i class="fas fa-chevron-right"></i> Step 1: Dice the onion, mushrooms and the bell pepper. Cut the sausage into small pieces.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 2: Heat the oil in a medium frying pan, then add the onion, bell pepper and mushrooms.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 3: Cook the vegetables for 1-2 minutes, then add the sausage pieces and cook for two more minutes.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 4: Beat the eggs with the milk and add the mixture to the pan on medium heat.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 5: Cover the pan with a lid, and wait until the upper part looks fluffy and slightly cooked.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 6: Using a spatula, carefully flip the omlette and cook for two more minutes.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 7: Transfer the omlette to a plate and top it off with shredded cheese. Serve it alongisde bread or vegetables of your choice</li>
+        </ol>
+        <p><i class="far fa-smile"></i> Enjoy your Romanian Omlette!</p>
+    </div>
+  </div>
+<footer class="mt-4">
+  <p>&copy; 2023 Group 13 CA106, Written by Ciarán</p>
+</footer>
+<script>
+  function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /* Loop through a collection of all HTML elements: */
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      /*search for elements with a certain atrribute:*/
+      file = elmnt.getAttribute("w3-include-html");
+      if (file) {
+        /* Make an HTTP request using the attribute value as the file name: */
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            /* Remove the attribute, and call this function once more: */
+            elmnt.removeAttribute("w3-include-html");
+            includeHTML();
+          }
+        }
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /* Exit the function: */
+        return;
+      }
+    }
+  }
+  </script> 
+   <script>
+    includeHTML();
+    </script> 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
