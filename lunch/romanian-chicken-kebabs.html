@@ -1,0 +1,86 @@
+<!Doctype html>
+<!--Ayllen Jicmon-->
+
+<html lang="en-gb">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="Food Recipes" content="Recipes" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="../css/style.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+      <title>Romanian Chicken Kebabs | Recipes</title> 
+   </head>
+<body>
+  <div w3-include-html="../nav/nav.html"></div>
+  <!-- Recipe is sourced from: https://theromaniancookbook.com/romanian-chicken-kebabs-frigarui-recipe/-->
+    <div class="recipe-container">
+        <h1><i class="fas fa-utensils"></i> Romanian Chicken Kebabs</h1>
+        <img src="../imgs/irish-stew.jpg" alt="Delicious Recipe">
+        <h2><i class="fas fa-clipboard-list"></i> Ingredients:</h2>
+        <ul>
+            <li><i class="fas fa-check"></i> 1kg deboned chicken</li>
+            <li><i class="fas fa-check"></i> 1 tsp salt</li>
+            <li><i class="fas fa-check"></i> 2 tsp black pepper</li>
+            <li><i class="fas fa-check"></i> 2 tsp chilli flakes</li>
+            <li><i class="fas fa-check"></i> 2 tsp dried thyme</li>
+            <li><i class="fas fa-check"></i> Juice of one lemon</li>
+            <li><i class="fas fa-check"></i> 2 tbsp olive oil</li>
+            <li><i class="fas fa-check"></i> 2 red peppers</li>
+            <li><i class="fas fa-check"></i> 1 courgette</li>
+            <li><i class="fas fa-check"></i> 2 medium red onions</li>
+        </ul>
+        <h2><i class="fas fa-book-open"></i> Instructions, <br> Prep Time: 10 minutes |  Cook Time: 15 minutes  |  Marinating Time: 2 hours</h2>
+        <ol>
+            <li><i class="fas fa-chevron-right"></i> Step 1: Cut the chicken into bite size pieces.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 2: Make the marinade by mixing the salt, pepper, chilli flakes and dried thyme.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 3: Mix the chicken with the marinade, then add the olive oil and lemon juice. Mix well and leave to marinate in the fridge for 2 hours.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 4: Cut the vegetables in chunky pieces, all around the same size.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 5: After the two hours have passed, start builging the kebabs. Start with a slice of onion, and then alternate meat with vegetables until you reach the top of the skewer.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 6: Spray the chicken kebabs with olive oil.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 7: Grill over the charcoal barbecue for around 3-4 minutes on each side.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 8: Serve along with fries or salad.</li>
+        </ol>
+        <p><i class="far fa-smile"></i> Enjoy your Romanian Chicken Kebabs.</p>
+    </div>
+  </div>
+<footer class="mt-4">
+  <p>&copy; 2023 Group 13 CA106, Written by Ciarán</p>
+</footer>
+<script>
+  function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /* Loop through a collection of all HTML elements: */
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      /*search for elements with a certain atrribute:*/
+      file = elmnt.getAttribute("w3-include-html");
+      if (file) {
+        /* Make an HTTP request using the attribute value as the file name: */
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            /* Remove the attribute, and call this function once more: */
+            elmnt.removeAttribute("w3-include-html");
+            includeHTML();
+          }
+        }
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /* Exit the function: */
+        return;
+      }
+    }
+  }
+  </script> 
+   <script>
+    includeHTML();
+    </script> 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
