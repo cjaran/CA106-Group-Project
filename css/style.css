@@ -166,3 +166,17 @@ ul {
 li {
   margin-bottom: 8px;
 }
+
+.nutrition{
+  display: inline-block;
+  width: auto;
+  background-color: #eaeaea;
+  border-radius: 20px;
+  padding: 10px 20px;
+  justify-content: space-between;
+}
+
+.nutrition:hover{
+  cursor: pointer;
+  background-color: #e1e1e1;
+}
