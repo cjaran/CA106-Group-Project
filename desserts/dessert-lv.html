@@ -1,0 +1,80 @@
+<!Doctype html>
+<!--Danila Jegorenkovs-->
+
+<html lang="en-gb">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="Food Recipes" content="Recipes" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="../css/style.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+      <title>Buberts | Recipes</title> 
+   </head>
+<body>
+  <div w3-include-html="../nav/nav.html"></div>
+  <!-- Recipe is sourced from: https://latvianeats.com/buberts/-->
+    <div class="recipe-container">
+        <h1><i class="fas fa-utensils"></i> Buberts</h1>
+        <img src="../imgs/buberts.jpg" alt="Delicious Recipe">
+        <h2><i class="fas fa-clipboard-list"></i> Ingredients</h2>
+        <ul>
+            <li><i class="fas fa-check"></i> 4 eggs4 tbs white sugar</li>
+            <li><i class="fas fa-check"></i> 4 tbs white sugar</li>
+            <li><i class="fas fa-check"></i> 4 tbs plain flour</li>
+            <li><i class="fas fa-check"></i> 1 tsp vanilla extract</li>
+            <li><i class="fas fa-check"></i> 500ml milk</li>
+            <li><i class="fas fa-check"></i> 500g raspberries, strawberries or blackberries</li>
+            <li><i class="fas fa-check"></i> 2tbs sugar</li>
+        </ul>
+        <ol>
+            <li><i class="fas fa-chevron-right"></i> Step 1: Separate the eggs. Beat the egg whites until soft peaks form. Mix the yolks with sugar and vanilla extract.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 2: Mix the flour with 100ml milk.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 3: Heat the rest of the milk in a medium saucepan on low heat. Once the milk reaches boiling point, add the flour mixture and mix well with the milk. Be careful, as the milk may boil over or burn quite fast.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 4: While constantly stirring, add egg yolk mixture. Then fold in whipped egg whites. Heat for further 1-2 minutes. Remove from the heat.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 5: To prepare the berry sauce, blend the berries in a blender with 1-2 tablespoons of sugar.</li>
+            <li><i class="fas fa-chevron-right"></i> Step 6: To serve, place 4-5 heaped tablespoons of buberts in dessert bowls and pour over the sauce.</li>
+        </ol>
+        <p><i class="far fa-smile"></i> Buberts</p>
+    </div>
+  </div>
+<footer class="mt-4">
+  <p>&copy; 2023 Group 13 CA106, Written by Danila</p>
+</footer>
+<script>
+  function includeHTML() {
+    var z, i, elmnt, file, xhttp;
+    /* Loop through a collection of all HTML elements: */
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      /*search for elements with a certain atrribute:*/
+      file = elmnt.getAttribute("w3-include-html");
+      if (file) {
+        /* Make an HTTP request using the attribute value as the file name: */
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            /* Remove the attribute, and call this function once more: */
+            elmnt.removeAttribute("w3-include-html");
+            includeHTML();
+          }
+        }
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        /* Exit the function: */
+        return;
+      }
+    }
+  }
+  </script> 
+   <script>
+    includeHTML();
+    </script> 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
